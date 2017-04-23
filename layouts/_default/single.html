@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+<article class="article">
+    {{ if eq .Section "post" }}
+    <span class="article-duration"><i class="fa fa-clock-o"></i> {{ .ReadingTime }} min read</span>
+    {{ end }}
+
+    <h1 class="article-title">{{ .Title }}</h1>
+
+    {{ if eq .Section "post" }}
+    <span class="article-date"><i class="fa fa-calendar"></i> {{ .Date.Format "January 2, 2006" }}</span>
+    {{ end }}
+
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+    {{ if .Params.tag }}
+    <h2>Tags:</h2>
+        {{ range .Params.tag }}
+        <a href="{{ "/tag/" | relLangURL }}{{ . | urlize }}" class="tags"><i class="fa fa-hashtag"></i> {{ . }}</a>
+        {{ end }}
+    {{ end }}
+</article>
+
+</main>
+
+{{ partial "footer.html" . }}

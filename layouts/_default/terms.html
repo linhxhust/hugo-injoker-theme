@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<main class="tags-cloud" role="main">
+
+<div class="archive">
+    <h2 class="archive-title tags-title">Tags</h2>
+    {{ range .Pages }}
+    <article class="archive-item" style="text-align: center;">
+        <a href="{{ .Permalink }}" class="archive-item-link">#{{ .Title }}</a>
+        <span class="archive-item-date">
+        </span>
+    </article>
+    {{ end }}
+</div>
+
+</main>
+{{ partial "footer.html" . }}

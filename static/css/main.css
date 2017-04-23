@@ -1,0 +1,577 @@
+@font-face {
+    font-family: 'Ampersand';
+    src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'),
+    url('calendas_plus_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    /* font-family: 'Merriweather', serif; */
+    /* text-rendering: optimizeLegibility; */
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    /* -moz-font-feature-settings: "liga" on; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+    color: #dd4814;
+    font-weight: bold;
+}
+
+a {
+    outline: none;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    padding: 20px 0;
+    position: relative;
+    background: #f5f5f5;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+}
+
+.nav-logo {
+    float: left;
+    margin-top: -11px;
+    transition: transform 150ms ease-out;
+}
+
+.nav-logo a {
+    float: left;
+    display: block;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-logo img {
+    display: block;
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+
+.nav-links li:first-child {
+    margin-left: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.post-author {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 2.457rem 0 0 0;
+  border-top: #EBF2F6 1px solid;
+}
+
+.post-author h4 {
+  margin: 0;
+}
+
+.post-author p {
+  margin:1.1rem 0;
+}
+
+
+.author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    margin-left: -40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+/* list of author links - location / url */
+.author-meta {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1;
+  color: #9EABB3;
+}
+
+.author-meta a {
+  color: #9EABB3;
+}
+.author-meta a:hover {
+  color: #111;
+}
+
+/* Create some space to the right for the share links */
+.post-author .author {
+  margin-right: 180px;
+  width: 70%;
+}
+
+.post-author h4 a {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.post-author h4 a:hover {
+  text-decoration: underline;
+}
+
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+.post-author .share {
+  position: absolute;
+  top: 2.457rem;
+  right: 0;
+  margin-left: 3%;
+}
+
+.post-author .share a {
+  display: inline-block;
+  margin:1.1rem 1.6rem 1.6rem 0;
+  text-decoration: none;
+}
+
+.share a:hover{
+  color:orange;
+}
+
+.icon-google-plus{
+  color: #d34836;
+}
+
+.icon-linkedin{
+  color: #0077B5;
+}
+
+.share .icon-twitter,
+.author-profile .icon-twitter,
+.icon-twitter:hover{
+  color: #00aced;
+}
+
+.share .icon-facebook,
+.author-profile .icon-facebook,
+.icon-facebook:hover{
+  color: #3b5998;
+}
+
+.share .icon-twitter:hover,
+.icon-twitter:hover,
+.share .icon-facebook:hover,
+.icon-facebook:hover {
+  color: orange;
+}
+
+.icon-feed {
+  color: orange;
+}
+
+.content {
+    max-width: 900px;
+    margin: 60px auto 80px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.tags-cloud {
+    max-width: 500px;
+    margin: 60px auto 80px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.article-title {
+    font-size: 34px;
+    color: #222;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.tags-title {
+    text-align: center;
+}
+
+.article-date {
+    color: #ccc;
+}
+
+
+.article-duration {
+    margin-top: 12px;
+    float: right;
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    padding: 1px 5px;
+    font-weight: bold;
+    border-radius: 3px;
+    background: #dd4814;
+    color: #fff
+}
+
+.article-content p {
+    margin: 15px 0 25px;
+}
+
+.article-content a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid #CBF8DF;
+    box-shadow: inset 0 -4px 0 #CBF8DF;
+    background: transparent;
+    transition: background 150ms ease;
+}
+
+.article-content a:hover,
+.article-content a:focus {
+    background: #CBF8DF;
+}
+
+.article-content hr {
+    width: 150px;
+    margin: 50px auto;
+    height: 1px;
+    overflow: hidden;
+    border: none;
+    background: #e5e5e5;
+}
+
+code, kbd, pre,
+samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre-wrap; }
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: #E3EDF3 1px solid;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.8em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
+
+/* These override prism’s default codeblock styles to make them match*/
+pre[class*="language-"], .token.operator{
+    background: #F7FAFB !important;
+}
+
+pre[class*="language-"]{
+    padding: 10px !important;
+    margin: 0 0 1.7rem 0 !important;
+}
+
+code[class*="language-"]{
+    font-family: Inconsolata, monospace, sans-serif !important;
+    text-shadow: none !important;
+    color: #333 !important;
+}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.55rem;
+    padding: 1px 8px;
+    border: #CCC 1px solid;
+    color: #666;
+    text-shadow: #FFF 0 1px 0;
+    font-size: 0.457rem;
+    font-weight: 700;
+    background: #F4F4F4;
+    border-radius: 4px;
+    box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 0 0 #fff inset;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.65rem 0 1.65rem 1.65rem;
+    padding: 0 0 0 1.65rem;
+    border-left: orange 3px double;
+}
+
+blockquote p {
+    margin: 0;
+    font-style: italic;
+    font-family: "Alegreya", georgia, serif;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8rem 0 0.8em 1.65rem;
+    font-size:.825rem;
+    color: #CCC;
+}
+
+blockquote small:before { content: "\2014 \00A0"; }
+
+blockquote cite {
+    font-weight: 700;
+}
+
+blockquote cite a { font-weight: normal; }
+
+.tags {
+    padding: 3px 6px;
+    background: #3e3e3e; 
+    text-decoration: none;
+    color: #fff;
+}
+
+.tags:hover{
+    background: #000;
+}
+
+.highlight {
+    border-radius: 3px;
+    position: relative;
+    margin: 40px 0;
+    font-size: 14px;
+}
+
+.highlight pre {
+    padding: 10px;
+}
+
+.archive {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.3em;
+    text-align: center;
+    color: #111;
+}
+
+.archive-title {
+    font-size: 32px;
+    margin-top: 60px;
+}
+
+.archive-item {
+    margin: 5px 0 15px;
+    padding: 0;
+}
+
+.archive-item-date {
+    color: #ccc;
+    font-size: 14px;
+    padding: 5px 0;
+    margin-top: 5px;
+    display: block;
+}
+
+.archive-item-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #222;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.archive-item-link:hover {
+    border-bottom-color: #222;
+}
+
+.footer {
+    padding: 25px 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-links li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: color 150ms ease;
+    margin: 0 15px;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #222;
+}
+
+.footer-links li::before {
+    content: '/';
+    position: relative;
+    left: -2px;
+}
+
+.footer-links li:first-child::before {
+    display: none;
+}
+.footer-links-kudos img {
+    position: relative;
+    top: 6px;
+    margin-left: 2px;
+}
+
+.footer-social {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.footer-social li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.footer-social a {
+    color: #888;
+    text-decoration: none;
+    transition: color 150ms ease;
+    margin: 0 5px;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+    color: #222;
+}
+
+@media (min-width: 600px) {
+    .header {
+        padding: 25px 0;
+    }
+
+    .nav-logo {
+        margin-top: -13px;
+    }
+
+    .nav-logo img {
+        max-height: 50px;
+    }
+
+    .nav-links {
+        font-size: 18px;
+    }
+
+    .nav-links li {
+        margin: 0 0 0 30px;
+    }
+
+    .content {
+        font-size: 19px;
+        line-height: 1.8;
+        margin: 100px auto;
+    }
+
+    .highlight {
+        font-size: 16px;
+        margin: 40px -20px;
+    }
+
+    .archive {
+        text-align: left;
+    }
+
+    .archive-title {
+        font-size: 38px;
+    }
+
+    .archive-item-date {
+        font-size: 19px;
+        text-align: right;
+        float: right;
+    }
+
+    .article-title {
+        font-size: 42px;
+    }
+
+    .article-duration {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        font-size: inherit;
+    }
+}

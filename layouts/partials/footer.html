@@ -1,0 +1,24 @@
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Params.copyright }}</a>
+        </li>
+        <li>
+            <a href="{{ .Site.RSSLink }}" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="{{ .Site.BaseURL }}images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="{{ .Site.Author.github }}" target="_blank"><i class="fa fa-github"></i></a>
+        <li><a href="{{ .Site.Author.facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <li><a href="{{ .Site.Author.instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
+    </ul>
+</footer>
+
+</div>
+
+{{ template "_internal/google_analytics.html" . }}
+</body>
+</html>

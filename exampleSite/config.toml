@@ -1,0 +1,48 @@
+baseurl = "https://iminh.com"
+languageCode = "en-us"
+title = "Im Linh"
+theme = "hugo-injoker-theme"
+googleAnalytics = ""
+disqusShortname = ""
+preserveTaxonomyNames = true
+
+
+[permalinks]
+    post = "/:slug/"
+    page = "/:slug/"
+
+[[menu.main]]
+    name = "Linux"
+    url = "/tag/linux/"
+[[menu.main]]
+    name = "Python"
+    url = "/tag/python/"
+[[menu.main]]
+    name = "Golang"
+    url = "/tag/golang/"
+[[menu.main]]
+    name = "TIL"
+    url = "/tag/til/"
+
+[params]
+    description = "Something about me"
+    copyright = "© 2017 Im Linh"
+
+    [params.logo]
+    url = "logo.jpg"
+    width = 50
+    height = 50
+    alt = "Im Linh"
+
+[Author]
+  name = "Tan Linh"
+  email = "hi@imlinh.com"
+  about = ""
+  facebook = "https://facebook.com/tanlinh.nd"
+  github = "https://github.com/tanlinhnd"
+  twitter = "@tanlinhnd"
+  reddit = "https://www.reddit.com/user/tanlinhnd/"
+  instagram = "https://www.instagram.com/tanlinhnd/"
+
+[taxonomies]
+    tag = "tag"

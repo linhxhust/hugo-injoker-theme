@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}images/{{ .Site.Params.logo.url }}">
+{{ .Hugo.Generator }}
+
+{{ if eq .URL "/" }}
+    <title>{{ .Title }} - {{ .Site.Params.description }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta property="article:publisher" content="{{ .Site.Params.facebook }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" content="{{ .Description }}" />
+    <meta name="twitter:url" content="{{ .Site.BaseURL }}" />
+    <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+{{ else }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z" }}" />
+    {{ if isset .Params "Lastmod" }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+    {{ end }}
+
+    <meta property="article:publisher" content="{{ .Site.Author.facebook }}" />
+    <meta property="article:author" content="{{ .Site.Author.facebook }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta name="twitter:description" content="{{ .Description }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="{{ $.Param "author" }}" />
+    <meta name="twitter:site" content="https://twitter.com/{{ .Site.Author.twitter }}" />
+    <meta name="twitter:creator" content="{{ .Site.Author.twitter }}" />
+{{ end }}
+
+{{ if eq .URL "/" }}
+    <meta property="description" content="{{ .Site.Params.description }}">
+{{ else }}
+  {{ if .Description }}
+    <meta property="description" content="{{ .Description }}">
+  {{ end }}
+{{ end }}
+
+{{ if .Keywords }}
+    <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+{{ end }}
+
+{{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" media="all">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
