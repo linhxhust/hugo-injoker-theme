@@ -4,14 +4,14 @@ A simple responsive blog theme for [Hugo](https://gohugo.io/).
 
 Base on [Hugo Lithium Theme](https://github.com/jrutheiser/hugo-lithium-theme)
 
-[Demo](https://imlinh.com)
+[Demo here](https://imlinh.com)
 
 ![Hugo Injoker Theme Screenshot](https://raw.githubusercontent.com/tanlinhnd/hugo-injoker-theme/master/images/screenshot.png)
 
 ## Features
 
 - Blog
-- Tags
+- Taxonomies / Term **(NEW)**
 - Responsive
 - Google Analytics
 
