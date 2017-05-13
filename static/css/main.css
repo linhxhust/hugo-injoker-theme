@@ -227,6 +227,7 @@ a {
     font-size: 16px;
     line-height: 1.7;
     color: #555;
+    text-align: justify;
 }
 
 .tags-cloud {
