@@ -296,7 +296,7 @@ a {
 }
 
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
+samp { font-family: monospace, serif; font-size: 0.9em; color: #D14; background: #b8b8b8;}
 pre { white-space: pre-wrap; }
 pre {
     -moz-box-sizing: border-box;
