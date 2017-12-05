@@ -22,9 +22,10 @@
         <a href="{{ "/tag/" | relLangURL }}{{ . | urlize }}" class="tags"><i class="fa fa-hashtag"></i> {{ . }}</a>
         {{ end }}
     {{ end }}
+
+    {{ partial "footer.html" . }}
 </article>
 
-{{ partial "footer.html" . }}
 
 </main>
 {{ partial "disqus.html" . }}
