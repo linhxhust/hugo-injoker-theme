@@ -1,7 +1,6 @@
 {{ partial "header.html" . }}
-
 <main class="content" role="main">
-
+    {{ partial "quote.html" . }}
 <div class="archive">
     {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" }}
     <h2 class="archive-title">{{ .Key }}</h2>
