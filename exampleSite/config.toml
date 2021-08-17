@@ -1,51 +1,61 @@
-baseurl = "http://127.0.0.1:1313/"
+baseurl = "https://blog.dmesg.sh/"
 languageCode = "en-us"
 title = "dmesg.sh"
 theme = "hugo-injoker-theme"
 googleAnalytics = ""
 disqusShortname = ""
 preserveTaxonomyNames = true
-
+uglyURLs = true
+publishDir = "docs"
+enableEmoji = true
 
 [permalinks]
-post = "/:slug/"
+post = "post/:slug/"
 page = "/:slug/"
 
 [[menu.main]]
 name = "Linux"
-url = "/tag/linux/"
-[[menu.main]]
-name = "Python"
-url = "/tag/python/"
-[[menu.main]]
-name = "Golang"
-url = "/tag/golang/"
+url = "/tag/linux"
 [[menu.main]]
 name = "TIL"
-url = "/tag/til/"
+url = "/tag/til"
 [[menu.main]]
-name = "Linh ba tinh"
-url = "/tag/linh-ba-tinh/"
+name = "DevOps"
+url = "/tag/devops"
+[[menu.main]]
+name = "Database"
+url = "/tag/database"
+[[menu.main]]
+name = "Resume"
+url = "https://blog.dmesg.sh/LinhNguyen_DevOps_Resume.pdf"
+[[menu.main]]
+name = "About me"
+url = "/about-me.html"
 
 [params]
-description = "Ghi chép linh ba tinh"
+description = "Nói ít thôi và đưa code đây"
+quote = "“Talk is cheap. Show me the code„"
+quote_author = "~ Linus Torvalds ~"
 copyright = "© 2017 dmesg.sh"
+disqus_url = "https://dmesg.sh"
+disqus_identifier = "tanlinhnd"
 
 [params.logo]
-url = "logo.jpg"
+url = "logo.png"
 width = 50
 height = 50
-alt = "dmesg.sh"
+alt = "rbash - Nói ít thôi và đưa code đây"
 
 [Author]
 name = "Linh Nguyen"
 email = "linh@dmesg.sh"
 about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
-facebook = "https://facebook.com/tanlinh.nd"
+facebook = "#"
 github = "https://github.com/tanlinhnd"
 twitter = "@tanlinhnd"
 reddit = "https://www.reddit.com/user/wolverine_f1/"
 instagram = "https://www.instagram.com/tanlinhnd/"
+linkedin = "https://linkedin.com/in/tanlinhnd/"
 
 [taxonomies]
 tag = "tag"
