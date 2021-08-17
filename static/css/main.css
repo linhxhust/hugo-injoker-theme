@@ -237,6 +237,7 @@ a {
     color: #222;
     margin: 0;
     line-height: 1.3;
+    text-align: left;
 }
 
 .tags-title {
@@ -383,7 +384,7 @@ blockquote cite a { font-weight: normal; }
 
 .tags {
     padding: 3px 6px;
-    background: #3e3e3e; 
+    background: #3e3e3e;
     text-decoration: none;
     color: #fff;
 }

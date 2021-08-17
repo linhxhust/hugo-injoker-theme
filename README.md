@@ -4,7 +4,7 @@ A simple responsive blog theme for [Hugo](https://gohugo.io/).
 
 Base on [Hugo Lithium Theme](https://github.com/jrutheiser/hugo-lithium-theme)
 
-[Demo here](https://imlinh.com)
+[Demo here](https://blog.dmesg.sh)
 
 ![Hugo Injoker Theme Screenshot](https://raw.githubusercontent.com/tanlinhnd/hugo-injoker-theme/master/images/screenshot.png)
 

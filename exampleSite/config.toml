@@ -1,6 +1,6 @@
-baseurl = "https://iminh.com"
+baseurl = "http://127.0.0.1:1313/"
 languageCode = "en-us"
-title = "Im Linh"
+title = "dmesg.sh"
 theme = "hugo-injoker-theme"
 googleAnalytics = ""
 disqusShortname = ""
@@ -8,41 +8,44 @@ preserveTaxonomyNames = true
 
 
 [permalinks]
-    post = "/:slug/"
-    page = "/:slug/"
+post = "/:slug/"
+page = "/:slug/"
 
 [[menu.main]]
-    name = "Linux"
-    url = "/tag/linux/"
+name = "Linux"
+url = "/tag/linux/"
 [[menu.main]]
-    name = "Python"
-    url = "/tag/python/"
+name = "Python"
+url = "/tag/python/"
 [[menu.main]]
-    name = "Golang"
-    url = "/tag/golang/"
+name = "Golang"
+url = "/tag/golang/"
 [[menu.main]]
-    name = "TIL"
-    url = "/tag/til/"
+name = "TIL"
+url = "/tag/til/"
+[[menu.main]]
+name = "Linh ba tinh"
+url = "/tag/linh-ba-tinh/"
 
 [params]
-    description = "Something about me"
-    copyright = "© 2017 Im Linh"
+description = "Ghi chép linh ba tinh"
+copyright = "© 2017 dmesg.sh"
 
-    [params.logo]
-    url = "logo.jpg"
-    width = 50
-    height = 50
-    alt = "Im Linh"
+[params.logo]
+url = "logo.jpg"
+width = 50
+height = 50
+alt = "dmesg.sh"
 
 [Author]
-  name = "Tan Linh"
-  email = "hi@imlinh.com"
-  about = ""
-  facebook = "https://facebook.com/tanlinh.nd"
-  github = "https://github.com/tanlinhnd"
-  twitter = "@tanlinhnd"
-  reddit = "https://www.reddit.com/user/tanlinhnd/"
-  instagram = "https://www.instagram.com/tanlinhnd/"
+name = "Linh Nguyen"
+email = "linh@dmesg.sh"
+about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
+facebook = "https://facebook.com/tanlinh.nd"
+github = "https://github.com/tanlinhnd"
+twitter = "@tanlinhnd"
+reddit = "https://www.reddit.com/user/wolverine_f1/"
+instagram = "https://www.instagram.com/tanlinhnd/"
 
 [taxonomies]
-    tag = "tag"
+tag = "tag"
