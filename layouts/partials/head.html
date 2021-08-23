@@ -25,7 +25,7 @@
     <meta property="og:description" content="{{ .Description }}" />
     {{ if isset .Params "og_image" }}
     <meta property="og:image" content="{{ $.Param "og_image" }}"/>
-    {{ end }}   
+    {{ end }}
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z" }}" />
     {{ if isset .Params "Lastmod" }}
@@ -56,9 +56,13 @@
     <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
 {{ end }}
 
+{{ if  }}
+
 {{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
+
+{{ template "_internal/google_analytics_async.html" . }}
 
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css?v=1.0.2" media="all">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" media="all">
